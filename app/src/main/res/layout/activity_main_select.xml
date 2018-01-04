@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="#ffffff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="vertical"
+        android:background="#000000"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="分辨率选择"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:textSize="30sp"
+            android:textColor="#ffffff"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/Button_320"
+        android:text="320*240"
+        android:textColor="@drawable/selector_button_color"
+        android:textSize="30sp"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/selector_button"
+        />
+
+    <Button
+        android:id="@+id/Button_640"
+        android:text="640*480"
+        android:textColor="@drawable/selector_button_color"
+        android:textSize="30sp"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/selector_button"
+        />
+
+    <Button
+        android:id="@+id/Button_800"
+        android:text="800*480"
+        android:textColor="@drawable/selector_button_color"
+        android:textSize="30sp"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/selector_button"
+        />
+
+    <Button
+        android:id="@+id/Button_1280"
+        android:text="1280*720"
+        android:textColor="@drawable/selector_button_color"
+        android:textSize="30sp"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/selector_button"
+        />
+
+    <Button
+        android:id="@+id/Button_1280_two"
+        android:text="1280*960"
+        android:textColor="@drawable/selector_button_color"
+        android:textSize="30sp"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/selector_button"
+        />
+
+    <!--<Button-->
+        <!--android:id="@+id/Button_1920"-->
+        <!--android:text="1920*1080"-->
+        <!--android:textColor="#3A5FCD"-->
+        <!--android:textSize="30sp"-->
+        <!--android:layout_width="180dp"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:layout_marginTop="40dp"-->
+        <!--android:background="@drawable/selector_button"-->
+        <!--/>-->
+
+</LinearLayout>

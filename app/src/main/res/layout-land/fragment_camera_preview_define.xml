@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/control_background"
+    >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="智能驾驶，伴您出行！"
+        android:textSize="50sp"
+        android:gravity="center"
+        android:textColor="#3A5FCD"
+        />
+
+    <TextView
+        android:id="@+id/resolution_text"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_height="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="25dp"
+        android:text="实时采集图像，分辨率：XXX×XXX（像素）"
+        android:textSize="15dp"
+        android:textColor="#3A5FCD"
+        />
+    <TextView
+        android:id="@+id/back_text"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_height="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="455dp"
+        android:text="云端处理后效果"
+        android:textSize="15dp"
+        android:textColor="#3A5FCD"
+        />
+
+    <LinearLayout
+        android:id="@+id/ShowLayout"
+        android:layout_width="match_parent"
+        android:layout_height="205dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/resolution_text"
+        android:layout_alignParentStart="true">
+
+        <SurfaceView
+            android:id="@+id/surfaceview"
+            android:layout_width="match_parent"
+            android:layout_height="205dp"
+            android:layout_weight="1" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="205dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:gravity="center">
+                <ProgressBar
+                    android:id="@+id/bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    style="@android:style/Widget.ProgressBar.Large"
+                    android:alpha="0"
+                    android:max="100" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/loading"
+                    android:text="on loading"
+                    android:alpha="0"
+                    />
+                <TextView
+                    android:id="@+id/position_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </FrameLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/timeDownload"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginTop="270dp"
+        android:layout_marginLeft="80dp"
+        android:textSize="20dp"
+        android:textColor="#3A5FCD"
+        />
+
+    <LinearLayout
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ShowLayout"
+        android:layout_marginLeft="0dp">
+
+        <TextView
+            android:id="@+id/timeChange_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:text="系统处理时延："
+            android:textColor="#3A5FCD"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/timeChange"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:textColor="#3A5FCD"
+            android:textSize="20dp" />
+
+        <!--<TextView-->
+        <!--android:id="@+id/network_speed"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="25dp"-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:layout_marginLeft="55dp"-->
+        <!--android:text="当前网速："-->
+        <!--android:textColor="#3A5FCD"-->
+        <!--android:textSize="20dp" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/speed"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="23dp"-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:textColor="#3A5FCD"-->
+        <!--android:textSize="20dp" />-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/control"
+        android:layout_below="@+id/ShowLayout"
+        android:layout_marginLeft="450dp"
+        android:orientation="horizontal"
+        android:layout_width="300dp"
+        android:layout_height="60dp">
+
+        <ImageButton
+            android:id="@+id/frag_main_button_connect"
+            android:layout_width="60dp"
+            android:layout_marginLeft="10dp"
+            android:scaleType="fitXY"
+            android:background="@color/control_background"
+            android:src="@drawable/upload"
+            android:layout_height="match_parent" />
+
+        <ImageButton
+            android:id="@+id/frag_main_button_back"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="45dp"
+            android:src="@drawable/back"
+            android:background="@color/control_background"
+            android:scaleType="fitXY"/>
+    </LinearLayout>
+</RelativeLayout>

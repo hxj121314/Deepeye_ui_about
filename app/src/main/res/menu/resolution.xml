@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/capture_mode"
+        android:title="Capture Mode">
+        <menu >
+            <group android:checkableBehavior="single">
+                <item android:id="@+id/camera" android:title="Camera"></item>
+                <item android:id="@+id/video" android:title="Video"  android:checked="true"></item>
+            </group>
+        </menu>
+    </item>
+    <item android:id="@+id/resolution"
+        android:title="Set Resolution">
+        <menu>
+            <group>
+                <item android:id="@+id/r320" android:title="320*240" ></item>
+                <item android:id="@+id/r640" android:title="640*480"></item>
+                <item android:id="@+id/r800" android:title="800*480"></item>
+                <item android:id="@+id/r720" android:title="1280*720"></item>
+                <item android:id="@+id/r960" android:title="1280*960"></item>
+            </group>
+        </menu>
+    </item>
+
+</menu>
